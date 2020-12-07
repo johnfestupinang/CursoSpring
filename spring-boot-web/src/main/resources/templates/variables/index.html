@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Ejem</title>
+</head>
+<body>
+<h1>Enviar varios parámetros por medio del @pathVariable</h1>
+
+	<ul>
+		<li>
+			<a th:href="@{/variables/string/}+'John'+'/'+'Estupiñan'">/params/string/?John/Estupiñan</a>
+		</li>
+		
+		<li>
+			<a th:href="@{/variables/string/}+${nombre}+'/'+${apellido}">/params/string/?Juanita/Jimenez</a>
+		</li>
+
+	</ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "texto.indexControlador.index.titulo",
+    "type": "java.lang.String",
+    "description": "A description for 'texto.indexControlador.index.titulo'"
+  },
+  {
+    "name": "texto.indexControlador.perfil.titulo",
+    "type": "java.lang.String",
+    "description": "A description for 'texto.indexControlador.perfil.titulo'"
+  },
+  {
+    "name": "texto.indexControlador.listar.titulo",
+    "type": "java.lang.String",
+    "description": "A description for 'texto.indexControlador.listar.titulo'"
+  },
+  {
+    "name": "texto.indexControlador.index.titulo",
+    "type": "java.lang.String",
+    "description": "A description for 'texto.indexControlador.index.titulo'"
+  },
+  {
+    "name": "texto.indexControlador.index.titulo",
+    "type": "java.lang.String",
+    "description": "A description for 'texto.indexControlador.index.titulo'"
+  }
+]}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Ejem</title>
+</head>
+<body>
+<h1>Enviar parámetros añl request htt get - url</h1>
+
+	<ul>
+		<li>
+			<a th:href="@{/params/string(texto='Hola Andrés')}">/params/string?texto=Hola Andrés</a>
+		</li>
+		<li>
+			<a th:href="@{/params/string(texto='Que tal John.!')}">/params/string?textoQue tal John.!</a>
+		</li>
+		
+		<li>
+			<a th:href="@{/params/mix-params(saludo='Cómo estas John?', numero=123)}">/params/mix-params?SaludoYNumero</a>
+			
+		</li>
+		
+		<li>
+			<a th:href="@{/params/mix-params-request(saludo='Cómo estas John?', numero=123)}">/params/mix-params-request?SaludoYNumero</a>
+			
+		</li>
+	</ul>
+</body>
+</html>
