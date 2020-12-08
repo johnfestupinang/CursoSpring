@@ -1,4 +1,4 @@
-package com.bolsadeideas.springboot.app.models;
+package com.bolsadeideas.springboot.app.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -8,30 +8,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-
 @Entity
-@Table(name="clientes")
-public class Cliente implements Serializable{
+@Table(name = "clientes")
+public class Cliente implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@NotEmpty
-	//@Size(min= 4, max=12)
 	private String nombre;
 	
 	@NotEmpty
@@ -40,12 +34,14 @@ public class Cliente implements Serializable{
 	@NotEmpty
 	@Email
 	private String email;
-	
+
 	@NotNull
-	@Column(name="create_at")
+	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern ="yyyy-MM-dd")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date createAt;
+	
+	private String foto;
 
 	public Long getId() {
 		return id;
@@ -86,10 +82,21 @@ public class Cliente implements Serializable{
 	public void setCreateAt(Date createAt) {
 		this.createAt = createAt;
 	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
-	/*@PrePersist
-	public void prePersist() {		
-		createAt = new Date();
-	}*/
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+
+
+	private static final long serialVersionUID = 1L;
 
 }
