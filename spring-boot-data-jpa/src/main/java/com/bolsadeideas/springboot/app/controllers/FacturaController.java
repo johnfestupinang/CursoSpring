@@ -42,7 +42,8 @@ public class FacturaController {
 			Model model,
 			RedirectAttributes flash) {
 		
-		Factura factura = clienteService.findFacturaById(id);
+		Factura factura = clienteService.fetchByIdWithClienteWhithItemFacturaWithProducto(id);
+		//clienteService.findFacturaById(id);
 		if(factura == null) {
 			flash.addAttribute("error", "¡La factura no existe en la Bd!");
 			return "redirect:/listar";
